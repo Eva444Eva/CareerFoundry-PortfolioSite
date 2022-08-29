@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --grey-solid:  grey solid;
+  --faded-grey: rgba(0, 0, 0, 0.3);
+  --EEEgrey-color:#eee;
+  --project-color:lightgray;
+  --sun-red: #f76414;
+  --sun-light: #fcffad;
+  --sun-orange: #edc655;
+  --white:  white;
+  --main-font: 'Roboto', sans-serif;
+  --font-weight-default: 400;
+  --font-weight-highlighted: 700;
+  --font-size1: 32px;
+  --font-size2: 24px;
+  --font-size3: 16px;  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size3);
+  color: var(#2b2b2b);
+}
+
+h1,h2 {
+  font-weight: var(--font-weight-highlighted);
+}
+
+h1 {
+  font-size: var(--font-size1);
+}
+
+h2 {
+  font-size: var(--font-size2)
+}
+
+a.default-link:link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a.default-link:visited {
+  color: var(--sun-red)
+}
+
+a.default-link:hover,
+a.default-link:focus {
+  color: var(--sun-light);
+  text-decoration: none;
+}
+
+a.default-link:active {
+  color: var(--sun-orange)
+}
+
+a.default-link,
+a.default-link:link,
+a.default-link:active,
+a.default-link:visited {
+  transition: color 0.25s ease-out; 
+}
+/*button Contact and Download CV at About Me*/
+button,
+.button-link {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--faded-grey);
+  transition: 0.9s opacity;
+}
+
+button:hover,
+button:focus,
+.button-link:hover,
+.button-link:focus  {
+  cursor: pointer;
+  opacity: 0.8;
+}
+/*INDEX*/
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* FOOTER*/
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/*HEADER*/
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 2px var(--grey-solid);
+  background-color: var(--EEEgrey-color)
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+  border-radius: 10px;
+  width: 200px;
+  height: 70px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+/*ABOUT ME*/
+.navigation-list__about {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.main__about {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+/*WORK*/
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.project-list__item {
+  background-color: var(--project-color);
+  padding: 20px;
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--sun-orange)
+  }
+  50% {
+    fill: var(--sun-light)
+  }
+  100% {
+    fill: var(--sun-red)
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+/* responsive layout */
+
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+  .project-list__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(--font-size2)
+  }
+}
