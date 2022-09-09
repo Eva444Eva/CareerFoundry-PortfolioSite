@@ -230,3 +230,13 @@ button:focus,
     font-size: var(--font-size2)
   }
 }
+
+/* Stylelint does not recognize all issues */
+
+/* */
+
+.test{}
+
+.no-length{
+  top: 0px;
+}
