@@ -1,21 +1,26 @@
 :root {
-  --primary-color: #357b70;
+  --primary-color:  #2596be;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
   --grey-solid:  grey solid;
   --faded-grey: rgba(0, 0, 0, 0.3);
   --EEEgrey-color:#eee;
   --project-color:lightgray;
+  --sun-shine: #FF9D00;
   --sun-red: #f76414;
   --sun-light: #fcffad;
-  --sun-orange: #edc655;
   --white:  white;
+  --backround-blue: #2596be;
+  --font-blue:#a2e0f6 ;
   --main-font: 'Roboto', sans-serif;
+  --font-weight-light: 300;
   --font-weight-default: 400;
   --font-weight-highlighted: 700;
-  --font-size1: 32px;
-  --font-size2: 24px;
-  --font-size3: 16px;  
+  --font-size1: 42px;
+  --font-size2: 36px;
+  --font-size3: 16px; 
+  --font-size-decor: 48px; 
+  --decorative-font: 'Oswald';
 }
 
 * {
@@ -27,28 +32,50 @@ body {
   font-family: var(--main-font);
   font-weight: var(--font-weight-default);
   font-size: var(--font-size3);
-  color: var(#2b2b2b);
+  color: var(--dark-grey);
 }
 
+/* layout of the page */
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url('../img/olympicoclouds.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header,
+footer {
+  height: 90px;
+}
+
+main {
+   flex: 1;
+}
+/*end layout of the page*/
+
 h1,h2 {
-  font-weight: var(--font-weight-highlighted);
+  font-family: var(--decorative-font);
 }
 
 h1 {
   font-size: var(--font-size1);
+  font-weight: 400;
 }
 
 h2 {
-  font-size: var(--font-size2)
+  font-size: var(--font-size2);
+  font-weight: 300;
 }
 
 a.default-link:link {
-  color: var(--primary-color);
+  color: var(--sun-red);
   text-decoration: none;
 }
 
 a.default-link:visited {
-  color: var(--sun-red)
+  color: var(--backround-blue);
 }
 
 a.default-link:hover,
@@ -58,7 +85,7 @@ a.default-link:focus {
 }
 
 a.default-link:active {
-  color: var(--sun-orange)
+  color: var(--sun-red);
 }
 
 a.default-link,
@@ -67,7 +94,8 @@ a.default-link:active,
 a.default-link:visited {
   transition: color 0.25s ease-out; 
 }
-/*button Contact and Download CV at About Me*/
+
+/*button Contact and Download CV at Contact*/
 button,
 .button-link {
   border: none;
@@ -89,7 +117,7 @@ button:focus,
   cursor: pointer;
   opacity: 0.8;
 }
-/*INDEX*/
+/*INDEX/HOME*/
 .profile__portrait {
   float: left;
   width: 250px;
@@ -103,12 +131,39 @@ button:focus,
   margin: 0 auto;
   text-align: center;
 }
+
+.profile > h1, h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.profile > a {
+  color: var(--sun-shine);
+}
+
+.profile > a:visited {
+  color: var(--font-blue);
+}
+
+.profile > a:hover,
+.profile > a:focus {
+  color: var(--sun-light);
+}
+
+
 /* FOOTER*/
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 20px;
+  border-top: 2px var(--grey-solid);
+  background-color: var(--EEEgrey-color);
+}
+
+footer > p {
+  margin-bottom: 5px;
 }
 /*HEADER*/
 .page-header {
@@ -116,14 +171,14 @@ button:focus,
   width: 100%;
   padding: 20px;
   border-bottom: 2px var(--grey-solid);
-  background-color: var(--EEEgrey-color)
+  background-color: var(--EEEgrey-color);
 }
 
 .page-header__item {
   flex: 0 1 200px;
   border-radius: 10px;
-  width: 200px;
-  height: 70px;
+  width: 270px;
+  height: 60px;
 }
 
 .page-header__item:last-child {
@@ -134,6 +189,87 @@ button:focus,
 .navigation-list {
   list-style-type: none;
 }
+
+/*CONTACT*/
+
+form { 
+  max-width:420px;
+  margin:50px auto;
+ }
+  
+.feedback-input {
+  color:white;
+  font-family: var(--main-font);
+  font-weight:400;
+  font-size: var(--font-size3);
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid var(--dark-grey);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { 
+  border:2px solid var(--white); 
+}
+
+.feedback-input::placeholder {
+  color: var(--dark-grey);
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: var(--decorative-font);
+  width: 100%;
+  background:var(--dark-grey);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+[type="submit"]:hover { background: var(--sun-shine); }
+
+.contact-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 10px;
+  
+}
+
+.contact-link-wrapper > a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-link-wrapper > a:visited {
+  color: var(--font-blue);
+}
+
+.contact-link-wrapper > a:hover,
+.contact-link-wrapper > a:focus {
+  color: var(--sun-red);
+}
+
 /*ABOUT ME*/
 .navigation-list__about {
   list-style-type: none;
@@ -150,11 +286,63 @@ button:focus,
   margin: auto;
   text-align: center;
 }
+
+.main-link {
+  text-decoration: none;
+  transition: 0.3s;
+  color: var(--backround-blue)
+}
+
+.main-link:visited {
+  color: var(--sun-red);
+}
+
+.main-link:hover,
+.main-link:focus {
+  color: var(--sun-orange);
+}
+
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.skill-header {
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 7rem;
+  height: 8rem;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px;
+  padding: 18px;
+  margin: 8px;
+}
+
 /*WORK*/
+
+.work-container > h1 {
+justify-content: center;
+}
+
 .project-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  padding: 20px;
 }
 
 .project-list__item {
@@ -231,12 +419,3 @@ button:focus,
   }
 }
 
-/* Stylelint does not recognize all issues */
-
-/* */
-
-.test{}
-
-.no-length{
-  top: 0px;
-}

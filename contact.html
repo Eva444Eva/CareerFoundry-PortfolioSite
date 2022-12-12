@@ -21,125 +21,124 @@
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
 
+    <link rel="preconnect" 
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" 
+      href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" 
+      rel="stylesheet"> 
+
     <link rel="stylesheet"
       type="text/css"
-      href="./css/style.production.css"/>
+      href="./css/styles.css"/>
 
     <meta name="viewport" 
       content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <header class="page-header">
-      <img src="./img/My-Logo.png"
-        alt="My Logo"
-        class="page-header__item" />
+    <div class="main-container">
+      <header class="page-header">
+        <img src="./img/My-Logo.png"
+          alt="My Logo"
+          class="page-header__item" />
 
-      <nav class="main-navigation page-header__item">
-        <ul role="menubar"
-          class="navigation-list">
-          <li role="presentation">
-            <a href="index.html"
-              role="menuitem"
-              class="navigation-list__item default-link navigation-list__item--active">
-              Home
-            </a>
-          </li>
+        <nav class="main-navigation page-header__item">
+          <ul role="menubar"
+            class="navigation-list">
+            <li role="presentation">
+              <a href="index.html"
+                role="menuitem"
+                class="navigation-list__item default-link navigation-list__item--active">
+                Home
+              </a>
+            </li>
 
-          <li role="presentation">
-            <a href="about.html"
-              role="menuitem"
-              class="navigation-list__item default-link">
-              About Me
-            </a>
-          </li>
+            <li role="presentation">
+              <a href="about.html"
+                role="menuitem"
+                class="navigation-list__item default-link">
+                About Me
+              </a>
+            </li>
 
-          <li role="presentation">
-            <a href="contact.html"
-              role="menuitem"
-              class="navigation-list__item default-link">
-              Contact
-            </a>
-          </li>
+            <li role="presentation">
+              <a href="contact.html"
+                role="menuitem"
+                class="navigation-list__item default-link">
+                Contact
+              </a>
+            </li>
 
-          <li role="presentation">
-            <a href="work.html"
-              role="menuitem"
-              class="navigation-list__item default-link">
-              Work
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+            <li role="presentation">
+              <a href="work.html"
+                role="menuitem"
+                class="navigation-list__item default-link">
+                Work
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <main>
-      <form action=""
-        method="post"
-        id="contact-form">
+      <main class="main-contact">
+        <form>      
+          <input name="name" 
+            type="text" 
+            class="feedback-input" 
+            placeholder="Name" />   
+          
+          <input name="email" 
+            type="text" 
+            class="feedback-input" 
+            placeholder="Email" />
 
-        <label class="standard-label"
-          for="contact-email">
-          Email:
-        </label>
+          <textarea name="text" 
+            class="feedback-input" 
+            placeholder="Message"></textarea>
+          
+          <input type="submit" value="SUBMIT"/>
+        </form>
 
-        <input type="email"
-          id="contact-email"
-          required />
+        <div class="contact-link-wrapper">
+          
+          Email: <a href="mailto:michaela.proios@gmail.com"
+          class="contact-link">michaela.proios@gmail.com</a>
+          
+          Tel: <a href="tel:+4917635704125"
+                class="contact-link"
+                aria-label="My phone number">+49 17635704125</a>
 
-        <label class="standard-label"
-          for="contact-tel">
-          Telephone:
-        </label>
+          <a href="./img/CV 2022.pdf"  
+                class="button-link" 
+                download="resumeProios.pdf">
+                Download my CV
+          </a>      
+        </div>
+      </main>
 
-        <input type="tel"
-          id="contact-tel" />
+      <footer class="page-footer">
+        <p>You can find me on</p>
 
-        <label class="standard-label"
-          for="contact-message">
-          Message:
-        </label>
+        <div class="social-media">
+          <a href="https://github.com/Eva444Eva" target="blank">
+            <img src="./img/svg/GH.svg"
+              width="32px"
+              height="32px"
+              alt="GitHub" />
+          </a>
 
-        <textarea required maxlength="240"
-          id="contact-message">
-        </textarea>
-
-        <input type="submit" value="Send message" />
-      </form>
-
-      Email:<a href="mailto:michaela.proios@gmail.com"
-      class="default-link">michaela.proios@gmail.com</a>
-      
-      <br />
-
-      Tel:<a href="tel:+4917635704125"
-            class="default-link"
-            aria-label="My phone number">+49 17635704125</a>
-      
-      <br />
-
-      <button type="button">Contact Me</button>
-    </main>
-
-    <footer class="page-footer">
-      <p>You can find me on</p>
-
-      <div class="social-media">
-        <a href="https://www.github.com">
-          <img src="./img/svg/GH.svg"
-            width="32px"
-            height="32px"
-            alt="GitHub" />
-        </a>
-
-        <a href="https://de.linkedin.com/in/michaela-proios">
-          <img src="./img/svg/LI.svg"
-            width="32px"
-            height="32px"
-            alt="LinkedIn" />
-        </a>
-      </div>
-    </footer>
+          <a href="https://de.linkedin.com/in/michaela-proios" target="blank">
+            <img src="./img/svg/LI.svg"
+              width="32px"
+              height="32px"
+              alt="LinkedIn" />
+          </a>
+        </div>
+      </footer>
+    </div>
 
     <script src="js/tota11y.min.js"></script>
   </body>

@@ -20,9 +20,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
     
+    <link rel="preconnect" 
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" 
+      href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" 
+      rel="stylesheet">
+      
     <link rel="stylesheet"
       type="text/css"
-      href="./css/style.production.css" />
+      href="./css/styles.css" />
 
     <meta name="viewport" 
       content="width=device-width, initial-scale=1">
@@ -74,22 +83,60 @@
     <main class="main__about">
       <div>
         <h1>About</h1>
-     
-        <p>This page is about myself. This is what I enjoy doing:</p>
+          <div class= "main__about-text">
+            <p>I was thinking about it for quite some time. I need to change my career path. Something that would push me well out of my comfort zone.</p>
+            <p>In my previous job, I really enjoyed working with developers on a daily basis and always wondered if I could ever learn to do the same.</p>
+            <p>However I was never considered for a "technical person" and thought coding was some kind of an elite activity. First I needed to find out if this is really the field for me. The Orientation Course at the <a href="https://digitalcareerinstitute.org/courses/orientation-course/" target="blank" class="main-link">Digital Career Institute</a> seemed like a perfect start. We learned how to create our first website in HTML and CSS. It was intense, challenging, but also a lot of fun!</p>
+            <p>This experience convinced me that I want to push my boundaries and further my education in this area. I am currently working on my first real projects in the Web Development Course from  <a href="https://careerfoundry.com/en/courses/become-a-web-developer/" target="blank" class="main-link">Career Foundry</a>.</p>
+          </div>
       
-        <ul class="navigation-list__about">
-         <li>Front-end development</li>
-         <li>Back-end development</li>
-         <li>Test driven development</li>
-         <li>Climbing</li>
-        </ul>
-      
-        <a href="https://www.linkedin.com/in/michaela-proios/?originalSubdomain=de" 
-          target="blank"  
-          class="button-link" 
-          download>
-          Download my CV
-        </a>
+        <section class="skills" id="skills">
+          <h2 class="skill-header">Technologies I use</h2>
+    
+          <div class="skills-wrapper">
+            <div class="first-set animate__animated animate__pulse">
+              <img
+                src="./img/svg/icons8-html-5.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              />
+              <img
+                src="./img/svg/icons8-css3.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              />
+              <img
+                src="./img/svg/icons8-javascript.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              />
+            </div>
+    
+            <div class="second-set animate__animated animate__pulse">
+              <img
+                src="./img/svg/icons8-bootstrap.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              />
+              <img
+                src="./img/svg/icons8-jquery.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              />
+              <img
+                src="./img/svg/icons8-git.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              />
+            </div>
+          </div>
+        </section>
       </div> 
 
       <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration" height="auto" viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -697,14 +744,14 @@
       <p>You can find me on</p>
 
       <div class="social-media">
-        <a href="https://www.github.com">
+        <a href="https://github.com/Eva444Eva" target="blank">
           <img src="./img/svg/GH.svg"
             width="32px"
             height="32px"
             alt="GitHub" />
         </a>
 
-        <a href="https://de.linkedin.com/in/michaela-proios">
+        <a href="https://de.linkedin.com/in/michaela-proios" target="blank">
           <img src="./img/svg/LI.svg"
             width="32px"
             height="32px"

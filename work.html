@@ -21,168 +21,177 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
 
+    <link rel="preconnect" 
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" 
+      href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" 
+      rel="stylesheet">  
+
     <link rel="stylesheet"
       type="text/css"
-      href="./css/style.production.css" />
+      href="./css/styles.css" />
 
     <meta name="viewport" 
       content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <header class="page-header">
-      <img src="./img/My-Logo.png"
-        alt="My Logo"
-        class="page-header__item" />
+    <div class=""> <!--the backround picture is not in this div, but in section-->
+      <header class="page-header">
+        <img src="./img/My-Logo.png"
+          alt="My Logo"
+          class="page-header__item" />
 
-      <nav class="main-navigation page-header__item">
-        <ul role="menubar"
-          class="navigation-list">
-          <li role="presentation">
-            <a href="index.html"
-              role="menuitem"
-              class="navigation-list__item default-link navigation-list__item--active">
-              Home
+        <nav class="main-navigation page-header__item">
+          <ul role="menubar"
+            class="navigation-list">
+            <li role="presentation">
+              <a href="index.html"
+                role="menuitem"
+                class="navigation-list__item default-link navigation-list__item--active">
+                Home
+              </a>
+            </li>
+
+            <li role="presentation">
+              <a href="about.html"
+                role="menuitem"
+                class="navigation-list__item default-link">
+                About Me
+              </a>
+            </li>
+
+            <li role="presentation">
+              <a href="contact.html"
+                role="menuitem"
+                class="navigation-list__item default-link">
+                Contact
+              </a>
+            </li>
+
+            <li role="presentation">
+              <a href="work.html"
+                role="menuitem"
+                class="navigation-list__item default-link">
+                Work
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="main-container work-container">
+        <h1>Work</h1>
+
+        <div class="project-list">
+          <!-- Grid items will live here -->
+        
+          <div class="project-list__item">
+            <h2>This Portfolio Site</h2>
+
+            <p>
+              One of my first projects was to built this Portfolio Site. 
+            </p>
+
+            <a href="https://github.com/Eva444Eva/CareerFoundry-PortfolioSite"
+              target="_blank"
+              class="default-link">See project on GitHub</a>
+          </div>
+
+          <div class="project-list__item">
+            <h2>Pokedex App</h2>
+
+            <p>
+              Small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
+              Key Features: Load data from an external source (API), view a list of item on user action (e.g., by clicking on a list item), view details for that item. Major languages: HTML, CSS, JS. Frameworks: Bootstrap. Technologies: Ajax, jQuery.
+            </p>
+
+            <a href="https://github.com/Eva444Eva/simple-js-app" 
+              target="_blank"
+              class="default-link">See project on GitHub</a>
+          </div>
+
+          <div class="project-list__item">
+            <h2>To Do List</h2>
+
+            <p>
+              To Do List App using jQuery. Features: The user can add a new item to a list of items.The user can cross out an item from the list of items. The user can delete an item from the list of items. The user can change the order of items in the list of items.
+            </p>
+
+            <a href="https://github.com/Eva444Eva/todo-list"
+              target="_blank"
+              class="default-link">See project on GitHub</a>
+          </div>
+
+          <div class="project-list__item">
+            <h2>Movie App</h2>
+
+            <p>
+              In Progress
+              <br>
+              A single-page, responsive movie app built with Angular, with routing and several interface views. The client-side developed in this project will support the existing server-side by facilitating user requests and rendering the response from the server-side via a number of different interface views. 
+            </p>
+
+            <a href="https://github.com/Eva444Eva/angular-movie-app"
+            class="default-link"
+            target="_blank">See project on GitHub
             </a>
-          </li>
+          </div>
 
-          <li role="presentation">
-            <a href="about.html"
-              role="menuitem"
-              class="navigation-list__item default-link">
-              About Me
-            </a>
-          </li>
+          <div class="project-list__item">
+            <h2>Project5</h2>
 
-          <li role="presentation">
-            <a href="contact.html"
-              role="menuitem"
-              class="navigation-list__item default-link">
-              Contact
-            </a>
-          </li>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+              voluptate at iusto incidunt molestiae involuptatibus, culpa
+              sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
+              possimus mollitia labore neque recusandae tenetur!
+            </p>
 
-          <li role="presentation">
-            <a href="work.html"
-              role="menuitem"
-              class="navigation-list__item default-link">
-              Work
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <section>
-      <h1>Work</h1>
-
-      <div class="project-list">
-        <!-- Grid items will live here -->
-      
-        <div class="project-list__item">
-          <h1>Project1</h1>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            voluptate at iusto incidunt molestiae in voluptatibus, culpa
-            sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
-            possimus mollitia labore neque recusandae tenetur!
-          </p>
-
-          <a href="#"
+            <a href="#"
+            target="_blank"
             class="default-link">See project on GitHub</a>
-        </div>
+          </div>
 
-        <div class="project-list__item">
-          <h1>Project2</h1>
+          <div class="project-list__item">
+            <h2>Project6</h2>
 
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            voluptate at iusto incidunt molestiae in voluptatibus, culpa
-            sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
-            possimus mollitia labore neque recusandae tenetur!
-          </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+              voluptate at iusto incidunt molestiae involuptatibus, culpa
+              sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
+              possimus mollitia labore neque recusandae tenetur!
+            </p>
 
-          <a href="#" 
+            <a href="#"
+            target="_blank"
             class="default-link">See project on GitHub</a>
+          </div>
         </div>
+      </section>
 
-        <div class="project-list__item">
-          <h1>Project3</h1>
+      <footer class="page-footer">
+        <p>You can find me on</p>
 
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            voluptate at iusto incidunt molestiae in voluptatibus, culpa
-            sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
-            possimus mollitia labore neque recusandae tenetur!
-          </p>
+        <div class="social-media">
+          <a href="https://github.com/Eva444Eva" target="blank">
+            <img src="./img/svg/GH.svg"
+              width="32px"
+              height="32px"
+              alt="GitHub" />
+          </a>
 
-          <a href="#"
-            class="default-link">See project on GitHub</a>
+          <a href="https://de.linkedin.com/in/michaela-proios" target="blank">
+            <img src="./img/svg/LI.svg"
+              width="32px"
+              height="32px"
+              alt="LinkedIn" />
+          </a>
         </div>
-
-        <div class="project-list__item">
-          <h1>Project4</h1>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            voluptate at iusto incidunt molestiae involuptatibus, culpa
-            sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
-            possimus mollitia labore neque recusandae tenetur!
-          </p>
-
-          <a href="#"
-          class="default-link">See project on GitHub</a>
-        </div>
-
-        <div class="project-list__item">
-          <h1>Project5</h1>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            voluptate at iusto incidunt molestiae involuptatibus, culpa
-            sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
-            possimus mollitia labore neque recusandae tenetur!
-          </p>
-
-          <a href="#"
-          class="default-link">See project on GitHub</a>
-        </div>
-
-        <div class="project-list__item">
-          <h1>Project6</h1>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            voluptate at iusto incidunt molestiae involuptatibus, culpa
-            sapiente. Eligendi impedit consequuntur nulla! Obcaecati iure
-            possimus mollitia labore neque recusandae tenetur!
-          </p>
-
-          <a href="#"
-          class="default-link">See project on GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="page-footer">
-      <p>You can find me on</p>
-
-      <div class="social-media">
-        <a href="https://www.github.com">
-          <img src="./img/svg/GH.svg"
-            width="32px"
-            height="32px"
-            alt="GitHub" />
-        </a>
-
-        <a href="https://de.linkedin.com/in/michaela-proios">
-          <img src="./img/svg/LI.svg"
-            width="32px"
-            height="32px"
-            alt="LinkedIn" />
-        </a>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
